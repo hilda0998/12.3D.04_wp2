@@ -20,15 +20,16 @@ class Biodata extends CI_Controller {
   */
  public function index()
  {
-  $this->load->view('v_form/biodata');
+  $this->load->view('v_form_bio');
  }
  
- public function cetak(){
+ public function cetak()
+ {
   $data = [
    'nim' => $this->input->post('nim'),
    'nama' => $this->input->post('nama'),
    'prodi' => $this->input->post('prodi')
   ];
-  $this->load->view('v_form/cetak');
+  $this->load->view('v_data_bio', $data);
  }
 }
